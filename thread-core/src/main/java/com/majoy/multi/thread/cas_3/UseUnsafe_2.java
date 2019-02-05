@@ -5,6 +5,13 @@ import sun.misc.Unsafe;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 
+/**
+ * unsafe类,主要功能能有内存操作,字段的定位和修改,挂起与恢复,CAS操作
+ * 内存方法 :allocateMemory();reallocateMemory();freeMemory()
+ * 字段的定位和修改 arrayBaseOffset(),objectFieldOffset()
+ * 挂起与恢复:park() unPark()
+ *
+ */
 class Vo{
     public int a = 10;
     public long b = 20;

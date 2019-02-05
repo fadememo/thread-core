@@ -36,7 +36,7 @@ public class UseCountDownLatch {
 				}
 				System.err.println("t2线程初始化完毕, 通知t3 线程继续操作");
 				countDownLatch.countDown();
-				
+
 			}
 		}, "t2");
 		 
