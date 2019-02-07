@@ -1,11 +1,6 @@
 package com.bfxy.thread.core.pool;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.RejectedExecutionHandler;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 
 public class UseThreadPoolExecutor {
@@ -18,8 +13,8 @@ public class UseThreadPoolExecutor {
 				60,	//线程的存活时间
 				TimeUnit.SECONDS,
 				//workQueue：BlockingQueue接口下面的实现类
-				//new ArrayBlockingQueue<>(2),	//使用有界队列: ArrayBlockingQueue
-				new LinkedBlockingQueue<>(),	//使用无界队列: LinkedBlockingQueue
+				new ArrayBlockingQueue<>(2),	//使用有界队列: ArrayBlockingQueue
+				//new LinkedBlockingQueue<>(),	//使用无界队列: LinkedBlockingQueue
 				new ThreadFactory() {	//threadFactory 线程工厂, 用于获取一个新的线程, 然后把该线程 投递到我们的线程池中去
 					@Override
 					public Thread newThread(Runnable r) {

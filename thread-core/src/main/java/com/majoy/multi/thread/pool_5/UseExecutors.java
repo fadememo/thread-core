@@ -22,6 +22,13 @@ class Task implements Runnable{
         }
         System.out.println(Thread.currentThread().getName()+" "+this.name+" " + " 执行完毕~~~~~");
     }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
 
 /**
