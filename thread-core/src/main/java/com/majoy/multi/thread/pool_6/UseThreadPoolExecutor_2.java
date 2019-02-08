@@ -1,8 +1,8 @@
-package com.majoy.multi.thread.pool_5;
+package com.majoy.multi.thread.pool_6;
 
 import java.util.concurrent.*;
 
-public class UseThreadPoolExecutor {
+public class UseThreadPoolExecutor_2  {
 
     public static void main(String[] args) {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(

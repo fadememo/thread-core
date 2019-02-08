@@ -1,4 +1,4 @@
-package com.majoy.multi.thread.pool_5;
+package com.majoy.multi.thread.pool_6;
 
 import com.bfxy.thread.core.pool.Task;
 

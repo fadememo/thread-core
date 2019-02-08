@@ -1,4 +1,4 @@
-package com.majoy.multi.thread.pool_5;
+package com.majoy.multi.thread.pool_6;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -37,7 +37,7 @@ ThreadPoolExecutor(0, Integer.MAX_VALUE,60L, TimeUnit.SECONDS, new SynchronousQu
 FinalizableDelegatedExecutorService(new ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>()))
 ScheduledThreadPoolExecutor(corePoolSize)
  */
-public class UseExecutors {
+public class UseExecutors_1 {
     public static void main(String[] args) {
         /**
          * 创建固定数量的线程线程池,实际返回的是ThreadPoolExecutor
