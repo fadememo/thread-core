@@ -15,13 +15,13 @@ import java.util.concurrent.locks.ReentrantLock;
  如果没有被阻塞的线程或者首位阻塞的线程是当前线程 返回false
  *
  */
-public class UseReentrantLock {
+public class UseReentrantLock_1 {
     private ReentrantLock lock = new ReentrantLock();
     public void process(){
         /**
          * 假设我将lock()放到try 和不放到try有什么区别?
          * 后者 假如异常发生在 lock()执行后,try前;未能成功进入finally去 unlock
-         * 前者 假如异常发生在lock时,去执行unlock
+         * 前者 假如异常发生在lock时,去执行unlock  ,所以上锁代码要写到 try外面
          */
         lock.lock();
         try {
@@ -54,7 +54,7 @@ public class UseReentrantLock {
          * 下面的执行案例 当线程池线程个数限制为3,则会
          */
         ExecutorService service = Executors.newFixedThreadPool(3);
-        UseReentrantLock ur = new UseReentrantLock();
+        UseReentrantLock_1 ur = new UseReentrantLock_1();
         CountDownLatch latch = new CountDownLatch(6);
         ReentrantLock lock = ur.lock;
         for(int i = 0;i<2;i++){
