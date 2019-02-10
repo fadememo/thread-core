@@ -53,7 +53,7 @@ public class UseExecutors_1 {
             e.printStackTrace();
         }
         for(int i = 0 ;i<6;i++){
-            //service1.submit(new Task("t"+i));
+            service1.submit(new Task("t"+i));
             //service1.execute(new Task("t"+i));
         }
         service1.shutdown();
