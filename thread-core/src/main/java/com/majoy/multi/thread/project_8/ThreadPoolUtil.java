@@ -67,7 +67,7 @@ public class ThreadPoolUtil extends ThreadPoolExecutor implements ExecutorServic
                         60L,
                         TimeUnit.SECONDS,
                         new PriorityBlockingQueue<>(Runtime.getRuntime().availableProcessors()));
-            case     
+            case
         }
 
     }
