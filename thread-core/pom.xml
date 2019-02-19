@@ -6,7 +6,10 @@
 	<groupId>com.bfxy</groupId>
 	<artifactId>thread-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <modules>
+        <module>jedisdemo</module>
+    </modules>
+    <packaging>pom</packaging>
 
 	<name>thread-core</name>
 	<description>thread-core</description>
