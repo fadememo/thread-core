@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>css选择器</title>
+<style type="text/css">
+	/*标签选择器*/
+	/*
+	div{
+		font-size:24px;
+		color:#F00;	
+	}
+	*/
+	
+	
+	/*类选择器*/
+	/*
+	.c1{
+		font-size:36px;
+		color:#00F;
+	}
+	*/
+	
+	/*id选择器*/
+	/*
+	#d1{
+		font-size:24px;
+		color:#0F0;
+	}
+	*/
+	
+	
+	/*并集选择器*/
+	/*
+	.c1,#d1{
+		font-size:24px;
+		color:#0F0;
+	}
+	*/
+	
+	/*交集选择器
+	div里面的span标签
+	*/
+	/*
+	.c1 span{ 
+		font-size:24px;
+		color:#0F0;
+	}
+	*/
+	
+	/*通用选择器*/
+	*{
+		font-size:24px;
+		color:#0F0;
+	}
+	
+	
+</style>
+</head>
+
+<body>
+<div class="c1">div1的内容<span>div内部的span内容</span></div>
+<div id="d1">div2的内容</div>
+<div class="c1">div3的内容</div>
+<!-- 注意：在同一个html页面中，建议不要出现两个同名的id属性的标签，后面使用javascript代码选择标签的时候，getElementById("id属性值") -->
+<div>div4的内容</div>
+<span>外面的span内容</span>
+</body>
+</html>

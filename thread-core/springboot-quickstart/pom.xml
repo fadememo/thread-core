@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.bfxy</groupId>
+	<artifactId>bfxy-001-springboot-quickstart</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>bfxy-001-springboot-quickstart</name>
+	<description>bfxy-001-springboot-quickstart</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.14.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+	
+    <!-- profile 配置切换: mvn clean install -P dev / prod / local / test /  -->
+    
+    <profiles>
+       <profile>
+          <id>dev</id>
+          <activation>
+             <activeByDefault>true</activeByDefault>
+          </activation>
+          <dependencies>
+             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-undertow</artifactId>
+             </dependency>
+          </dependencies>         
+          <properties>
+             <spring.profiles.active>dev</spring.profiles.active>
+             <bfxy.dynamic>2018-001</bfxy.dynamic>
+          </properties> 
+       </profile>
+    
+       <profile>
+          <id>prod</id>
+          <dependencies>
+             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-undertow</artifactId>
+             </dependency>
+          </dependencies>
+          <properties>
+             <spring.profiles.active>prod</spring.profiles.active>
+             <bfxy.dynamic>2018-002</bfxy.dynamic>
+          </properties>
+       </profile>
+    </profiles>
+    
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency> 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>		
+	</dependencies>
+	<!-- 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	-->
+    <build>
+        <finalName>bfxy-001-springboot-quickstart</finalName>
+        <plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin> 
+			<!--       
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+            </plugin> 
+            -->          
+            <!-- 解解决maven update project 后版本降低为1.5的bug -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            
+            <!-- MAVEN打包时动态切换: mvn clean package -P prod/dev/local -->
+            <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-resources-plugin</artifactId>
+               <executions>
+                  <execution>
+                     <id>default-resources</id>
+                     <phase>validate</phase>
+                     <goals>
+                        <goal>copy-resources</goal>
+                     </goals>
+                     <configuration>
+                        <outputDirectory>target/classes</outputDirectory>
+                        <useDefaultDelimiters>false</useDefaultDelimiters>
+                        <delimiters>
+                           <delimiter>$</delimiter>
+                        </delimiters>
+                        <resources>
+                           <!-- 打包时包含properties、xml --> 
+                           <resource>  
+                              <directory>src/main/java</directory>  
+                              <includes>  
+                                  <include>**/*.properties</include>  
+                                  <include>**/*.xml</include>  
+                              </includes>  
+                              <!-- 是否替换资源中的属性-->  
+                              <filtering>true</filtering>  
+                           </resource>                          
+                           <resource>
+                              <directory>src/main/resources/</directory>
+                              <filtering>true</filtering>
+                              <includes>
+                                 <include>**/*.xml</include>
+                                 <include>**/*.yml</include>
+                                 <include>**/*.properties</include>  
+                              </includes>
+                           </resource>
+                           <resource>
+                              <directory>src/main/resources/</directory>
+                              <filtering>false</filtering>
+                              <excludes>
+                                 <exclude>**/*.xml</exclude>
+                                 <exclude>**/*.yml</exclude>
+                                 <include>**/*.properties</include>  
+                              </excludes>
+                           </resource>
+                        </resources>
+                     </configuration>
+                  </execution>
+               </executions>
+            </plugin>               
+            <!-- 单元测试 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                    <includes>
+                        <include>**/*Test*.java</include>
+                    </includes>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <!-- 绑定到特定的生命周期之后，运行maven-source-pluin 运行目标为jar-no-fork -->
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>   
+        </plugins>    
+    </build>
+
+</project>

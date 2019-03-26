@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>体验javascript</title>
+<!-- 用javascript来校验用户名（4-14位字母或数字）  -->
+<script type="text/javascript">
+	function checkName(){
+		//获取用户输入内容
+		var userName = document.getElementById("userName").value;
+		var reg = /^[a-z0-9]{4,14}$/i;
+		if(!reg.test(userName)){
+			alert("用户名格式不对");
+			return false;
+		}
+		return true;
+	}
+
+</script>
+</head>
+
+<body>
+<form action="backend.html" method="post" onsubmit="return checkName()">
+	用户名：<input type="text" name="userName" id="userName"/><br/>
+    <input type="submit" value="注册"/>
+</form>
+</body>
+</html>

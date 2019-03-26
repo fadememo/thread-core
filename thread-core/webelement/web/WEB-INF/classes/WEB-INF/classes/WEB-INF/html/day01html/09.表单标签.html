@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>表单标签</title>
+</head>
+
+<body>
+<!-- 
+	一个表单标签：
+    	常用的属性：
+        	action: 表单提交到的地址.。点击了submit的提交按钮，就会把数据提交到action的地址
+            method: 提交方式。 
+                两种提交方式：
+                		get
+                        	1）提交的数据会放到地址栏上面	
+                            2) get提交的数据不超过1kb，只适合简单的数据
+                        post
+                        	1）提交的数据不会放到地址栏
+                            2）post提交的数据没有限制。比如文件上传
+-->
+<form action="http://localhost:8080/Test/GetData" method="get">
+	<!-- 单行输入域：
+    常用的属性
+    	value: 该输入的默认值
+         name: 这个必须填。该name的属性值用于给后台程序获取该标签输入的内容
+         size: 可以输入的字符数量
+     -->
+	用户名：<input type="text" value="4-10位的字母或数字" name="userName" size="25" /><br/>
+    <!--密码输入域： 以非明文的效果获取用户输入的数据。 -->
+    密码：<input type="password" name="userPwd" /><br/>
+    <!-- 单选： 
+    	注意： 
+        	1)如果是同一组的单选选项就使用相同的name属性值
+            2)单选按钮的value属性一定填。这个value的值就是发送给后台程序的内容
+            
+            -->
+    性别：<input type="radio" name="gender" value="男"/>男<input type="radio" name="gender" value="女"/>女<br/>
+    爱好：
+    <!-- 多选按钮：
+    	注意：
+        	1）如果是同一组的多选选项就使用相同的name属性值
+            2)多选按钮的value属性一定填。这个value的值就是发送给后台程序的内容
+    -->
+    <input type="checkbox" name="hobit" value="篮球"/>篮球
+    <input type="checkbox" name="hobit" value="足球"/>足球
+    <input type="checkbox" name="hobit" value="兵乓球"/>兵乓球<br/>
+    籍贯：
+    <!--
+    	下拉选项：
+    		注意： 
+            	1）name属性就是后台程序获取的标记
+                2)下拉选项的option标签中的value属性一定填。这个value的值就是发送给后台程序的内容
+     -->
+    <select name="jiguan">
+    	<option value="广东">广东</option>
+        <option value="广西">广西</option>
+        <option value="湖南">湖南</option>
+    </select><br />
+    <!-- 隐藏域：用于携带数据，但是在页面上不会显示效果
+    	注意： 
+            	1）name属性就是后台程序获取的标记
+                2) 这个value的值就是发送给后台程序的内容
+     -->
+    <input type="hidden" name="id" value="001"/>
+   个人简介：
+   <!--多行输入域：可以输入多行文本
+   	rows: 一共有几行
+    cols: 一行可以输入几行字符
+    -->
+   	<textarea rows="5" cols="20" name="info"></textarea> 
+    
+    <!-- 提交按钮： 点击这个按钮，form中的全部数据就会发送到后台
+    	value: 表示按钮显示的文本
+    -->
+    <input type="submit" value="注册"/>
+    <!--
+    	重置按钮： 点击这个按钮，form中的所有标签返回到初始默认状态
+     -->
+    <input type="reset" />
+
+</form>
+</body>
+</html>

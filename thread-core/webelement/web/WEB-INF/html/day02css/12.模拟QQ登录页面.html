@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模拟QQ登陆页面</title>
+<style type="text/css">
+	/*修饰主div*/
+	#main{
+		/*宽度和高度*/
+		width:450px;
+		height:300px;
+		/*边框*/
+		border:1px solid #000;
+		/*设置外边距*/
+		/*简写属性*/
+		margin:150px 0 0 420px;
+		
+		/*设置背景图片*/
+		background-image:url(../05.%E7%B4%A0%E6%9D%90/1.jpg);
+		background-repeat:no-repeat;
+		background-position:top center;
+	}
+	
+	/*用户名div*/
+	#userName{
+		/*设置外边距*/
+		margin:60px 0 0 100px;
+	}
+	
+	/*密码div*/
+	#userPwd{
+		/*设置外边距*/
+		margin:20px 0 0 100px;
+	}
+	
+	/*按钮div*/
+	#btn{
+		/*设置外边距*/
+		margin:20px 0 0 150px;
+	}
+	
+	/*注册按钮*/
+	#regBtn{
+		margin-left:30px;
+	}
+	
+	/*设置用户输入框的背景*/
+	#nameInput{
+		background-image:url(../05.%E7%B4%A0%E6%9D%90/head.png);
+		background-repeat:no-repeat;
+		/*设置左内边距*/
+		padding-left:30px;
+	}
+	
+	/*设置密码输入框的背景*/
+	#pwdInput{
+		background-image:url(../05.%E7%B4%A0%E6%9D%90/key.jpg);
+		background-repeat:no-repeat;
+		/*设置左内边距*/
+		padding-left:30px;
+	}
+</style>
+</head>
+
+<body>
+<div id="main">
+	<form>
+    	<div id="userName">
+        	用户名：<input id="nameInput" type="text" name="userName"/>
+        </div>
+        <div id="userPwd">
+        	密&nbsp;&nbsp;码：<input id="pwdInput" type="password" name="userPwd"/>
+        </div>
+        <div id="btn">
+        	<input type="submit" value="登陆"/><input type="button" value="立即注册" id="regBtn"/>
+        </div>
+    </form>
+</div>
+</body>
+</html>

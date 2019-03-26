@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>表格标签</title>
+</head>
+
+<body>
+<!--
+   标签：
+	table 表格
+    tr   行
+    td   单元格
+    th   表头
+    caption  标题
+     
+	常用的属性：
+    	border  表格的边框
+        width  宽度
+        heigth 高度
+        align   对齐方式。 left: 左对齐   center:居中  right：右对齐
+        rowspan  行合并。把多行的单元格合并
+        colspan  列合并。把多列的单元格合并
+
+-->
+<table border="1px" width="400px" height="200px" align="center">
+	<caption>2014年期末考试成绩单</caption>
+    <thead>
+	<tr>
+    	<th>姓名</th>
+        <th>班级</th>
+        <th>成绩</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    	<td rowspan="2">狗娃</td>
+        <td>计算机1班</td>
+        <td>80</td>
+    </tr>
+     <tr>
+        <td>经济1班</td>
+        <td>90</td>
+    </tr>
+    <tr>
+    	<td>狗剩</td>
+        <td>计算机2班</td>
+        <td>78</td>
+    </tr>
+    <tr>
+    	<td>狗蛋</td>
+        <td>软件1班</td>
+        <td>90</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+    	<td colspan="2">平均分</td>
+        <td>85</td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>

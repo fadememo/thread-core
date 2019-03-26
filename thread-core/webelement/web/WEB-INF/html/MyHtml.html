@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyHtml.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+  </head>
+  
+  <body>
+  	<a name= "top">这里是一个本页面锚点</a>
+    This is my HTML page. <br>
+    <h1> h1,h2,h3,h4,h5,h6 定义 HTML 标题级别。 </h1><br>	
+	<p>	p定义段落。</p><br>
+	<blockquote>blockquote定义缩进的段落</blockquote>
+	br定义简单的折行。<br>	                           
+	<hr>	hr定义水平线。                                                   <br>
+	sup<sup>定义上标</sup><br>
+	sub<sub>定义下标</sub><br>
+	<pre>pre定义一个原样输出的文本块</pre>
+	<hr>
+	
+	这里是有序列表,使用ol+li+type属性定义,type可选有数字和罗马数字等:
+	<ol type="1">
+		<li>li定义有序列表的列表项</li>
+		<li>li定义有序列表的列表项</li>	
+	</ol>
+	<hr>
+	
+	<ul type="square">ul用于定义无序列表,ul+li+type 实现,可选有point和square:
+		<li>li定义列表项</li>
+		<li>li定义列表项</li>
+	</ul>
+	<hr>
+	
+	<dl>项目列表,多层展示时,使用dl+dt+dd+ 实现
+		<dt>dt是二级列表:
+			<dd>dt是二级列表,dd是三级列表</dd>
+			<dd>dt是二级列表,dd是三级列表</dd>
+		</dt>
+		<dt>dt是二级列表:
+			<dd>dt是二级列表,dd是三级列表</dd>
+			<dd>dt是二级列表,dd是三级列表</dd>
+		</dt>			
+	</dl>
+	<hr>
+	<span> span是行内标签,主要用在css中 用于收纳一些标签</span>
+	<div> div是块标签,主要用在css中 用于收纳一些标签</div>
+	<hr>
+	超链接标签,使用a+href+target实现,href可选的协议有 网址/file(相对或者绝对)路径//thunder/ftp/qq/mail;<br>
+	常用协议有 http,file,<br>
+	target有_blank和 _self<br>
+	<ul>
+		<li><a href="http://www.baidu.com" target="_blank">百度链接https://www.baidu.com</a><br></li>
+		<li><a href="file://localhost/C:/Users/Administrator/Pictures/新建文件夹/IMG_20181219_120107R.jpg">本地文件图片file://localhost/C:/Users/xxx.jpg</a><br></li>
+		<li><a href="mailto:mzydianzi@qq.com">mailto:mzydianzi@qq.com调起邮箱</a><br></li>
+		<li><a href="tencent://Message/?Uin=353282031&websiteName=q-zone.qq.com&Menu=yes" target="_blank">tencent://Message/?Uin=353282031&websiteName=q-zone.qq.com&Menu=yes 调起qq
+   		 <i class="icon iconfont icon-qq"></i>
+		</a> </li><br>
+		<li>调起手机qq要使用mqqwpa://im/chat?chat_type=wpa&uin=353282031&version=1&src_type=web&web_src=oicqzone.com</li>
+		<li><a href="qq:353282031">qq:353282031		</a><br></li>
+		<li><a href="#top">返回顶部的锚点,打锚点使用a+name实现,而链接锚点使用 #name</a><br></li>
+	</ul>
+	<hr></h1>
+	图片使用img +src 实现,可选的属性有src,height,width,title,alt<br>
+	<img src= "https://avatars3.githubusercontent.com/u/13723918?s=460&v=4" width = "100px" height = 50px title = "提示文字" alt = "替换文字" >
+	热点,类似超链接效果,使用map+shape+coords+href+target实现
+	<map name = "map" ></map>
+	
+	<hr>
+	<ul>转义字符使用& 和 lt,gt,amp +;   实现:
+		<li>空格 &+nbsp&nbsp;</li>
+		<li>小于&+lt&lt;</li>
+		<li>大于&+gt&gt;</li>
+		<li>版权&+reg实现<sup>&reg;</sup></li>
+		<li>版权&+copy实现<sup>&copy;</sup></li>
+	</ul>
+	<hr>
+	表格使用table+thead+tbody+tfoot+tr+td 实现,属性有border,align,width,height ,caption
+	<table border="1px" width="400px" height= "200px" align="center" >
+		<caption>"表格标题" 使用内嵌在table里面的caption标签实现</caption>
+		<thead>
+			<tr>
+				<th>majoy</th><th colspan="2">majoy+colspan行合并</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>never</td><td>never</td><td rowspan = "2">never+rowspan列合并</td>
+			</tr>
+			<tr>
+				<td>die</td><td>die</td>
+			</tr>
+		</tbody>
+		<tfoot>	
+			<tr>
+				<td>666sd</td><td>666sd</td><td>666sd</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr>
+	表单标签使用form + action 提交地址 + method 提交方式+ input+type 类型+value 默认值 + name 后台接收命名 + ;
+	 (type可选有 text button radio)(action )(method 可选有post和get)
+	<form action="http://localhost:8080/elementdemo/GetData" method="get">
+		用户名:(输入框使用input+text)<input type = "text" value="4-10位字母或数字" name="username"><br>
+		密码&nbsp;&nbsp;(密码使用password):<input type="password"  name="password"><br>
+		性别&nbsp;&nbsp;(单选按钮使用radio+value):<input type="radio" name="gender" value="man">男<input type="radio" name="gender" value="woman">女<br>
+		爱好&nbsp;&nbsp;(多选使用checkbox+name): 
+		<input type="checkbox" value="basketball" name="hobit">篮球
+		<input type="checkbox" value="football" name="hobit">足球
+		<input type="checkbox" value="cricketball" name="hobit">板球
+		<br>
+		籍贯&nbsp;&nbsp;(下拉使用select name+option value):
+		<select name="birthplace">
+			<option value="gd">广东</option><option value="sd">山东</option><option value="hj">胡建</option>
+		</select><br>
+		紧急联系人&nbsp;&nbsp;(多选下拉使用select name+ mutiple size+ option value):<br>
+		<select mutiple="mutiple" name="phone" size="5">
+			<option value="132-9989-6340">132-9989-6340</option><option value="132-9989-6341">132-9989-6341</option>
+			<option value="132-9989-6342">132-9989-6342</option><option value="132-9989-6343">132-9989-6343</option>
+			<option value="132-9989-6344">132-9989-6344</option><option value="132-9989-6345">132-9989-6345</option>
+			<option value="132-9989-6346">132-9989-6346</option><option value="132-9989-6347">132-9989-6347</option>
+		</select><br>
+		
+		hidden&nbsp;&nbsp;(隐藏域不可见.使用 hidden+name):<input type="hidden" name="type" value="001"><br>
+		文件选择器&nbsp;&nbsp;(密码使用input+password):<input type="password"><br>
+		个人介绍域&nbsp;&nbsp;(多行输入使用textarea+cols+rows):<textarea rows="5" value="一句话吹嘘一下自己吧" cols="20" name="selfdesc"></textarea><br>
+		提交按钮&nbsp;&nbsp;(提交使用input+submit):<input type="submit" value="提交登记"><br>
+		重置按钮&nbsp;&nbsp;(提交使用input+reset):<input type="reset" value="重置"><br>
+	</form>	
+	<hr>
+	框架集标签使用 frameset,属性包括 cols 列划分和 rows 行划分
+	框架标签使用 frame,属性包括src 和 name(和指定在超链接中的target一起使用用于给页面定位)
+	
+	<hr>
+	css标签用于对页面元素进行修饰,内嵌的css属性使用style<br>
+	<b style="font-size:24px;color:#0F0">	b定义粗体文本。 行内css标签style="font-size:24px;color:#0F0 "</b> <br>  
+	<center class="c">	center定义居中。 外联css使用class类选择器   class="c" </center> 
+	<del id= "b">	del定义被删除文本。  外联css采用id选择器    ,id= "b"      </del><br>
+	<pre>
+		/* 使用link标签+rel属性和type+href定义一个外联标签   ,形如link rel="stylesheet" type="text/css" href="../css/styles.css"*/
+		/*选择器采用优先级*/
+		<i>i定义斜体文本,css语法元素有:选择器 ; css属性;css值</i>
+		css属性有:<ul>
+			<li>color颜色  值可选 #0ff</li>
+			<li>letter-space字符间距 值可选10px </li>
+			<li>text-align:right 字符方向</li>
+			<li>文本修饰 text-decoration:none 文本修饰,值可选 underline over-line line-through none</li>
+			<li>font-family 字体,值可选有 宋体,黑体</li>
+			<li>font-size 大小,值可选有 18px ,其他还有粗细font-weight 和 font-style</li>
+			<li>background-image:url(url.jpg)</li>
+			<li>background-repeat:none 图片重复属性,可选值有no-repeat</li>
+			<li>background-position 背景图片位置,可选值有 top left指的是左上角</li>
+		</ul>
+		css定位有:<ul>
+			<li>相对定位position:relative</li>
+			<li>绝对定位position:absolute </li>
+			<li>固定定位position:fixed</li>
+		</ul>
+		<i id="b">i定义斜体文本,使用id选择器id="b"</i>
+		<i class="c">i定义斜体文本,使用类选择器class="c" </i>
+		<a href="http://www.baidu.com" target="_blank" class="c" id="p">百度链接https://www.baidu.com</a><br>
+		<a href="http://www.baidu.com" target="_blank" class="c">百度链接https://www.baidu.com</a><br>
+		<a href="http://www.baidu.com" target="_blank">百度链接https://www.baidu.com</a><br>
+		<a href="http://www.baidu.com" target="_blank">百度链接https://www.baidu.com</a><br>
+		<span>特惠价:只要298元</span>
+		<progress ondragstart="devicePixelRatio">	progress 定义任何类型的任务的进度。progress ondragstart="devicePixelRatio"</progress><br>
+		<progress ondragstart="Math" >	progress 定义任何类型的任务的进度。progress ondragstart="devicePixelRatio"</progress><br>
+		#b{/*id选择器 ,标签要使用id属性 */
+			font-size:24px;
+			color:#f00;
+		}
+		.c{/*类选择器,标签要使用class属性值*/
+			font-size:24px;
+			color:#f00;
+		}
+		i{ /*标签选择器*/
+			font-size:24px;
+			color:#f00;
+		}
+		.c,p{/*使用,分割作为并集选择器*/
+			font-size:24px;
+			color:#f00;
+		}
+		.c i{/*使用空格分割作为交集选择器*/
+			font-size:24px;
+			color:#f00;
+		}
+		div *{ /* *通用选择器,此处使用交集*/
+			font-size:24px;
+			color:#f00;
+		}
+		/*伪类选择器有放置顺序要求,hover必须link和visited之后,active必须hover之后*
+		a:link{/*伪类选择器,状态有link 未被访问过; hover 鼠标经过;active 点击,*/
+			font-size:24px;
+			color:#f00;
+		}
+		a:visited{/*伪类选择器,状态有link 未被访问过; hover 鼠标经过;active 点击,*/
+			font-size:24px;
+			color:#ff0;
+		}
+		a:hover{/*伪类选择器,状态有link 未被访问过; hover 鼠标经过;active 点击,*/
+			font-size:28px;
+			color:#0f0;
+		}
+		a:active{/*伪类选择器,状态有link 未被访问过; hover 鼠标经过;active 点击,*/
+			font-size:24px;
+			color:#00f;
+		}
+	</pre>
+	<hr>
+	盒子模型:
+	<div id="div1" >
+		div1
+	</div>
+	<div id="div2">
+		div2
+	</div>
+	<div id="div3">
+		div3
+	</div>
+	<div id="div4" >
+		div4
+		<div id="div5">div5</div><div id="div6">div6</div>
+	</div>
+	
+	
+	<hr>
+	<div id="main"> <!-- 登陆背景页面 --><form action="http://localhost:8080/elementdemo/GetData" method="get">
+		<div id="un">qq号:<input type="username" name="username"></div><!-- 用户名输入框 -->
+		<div id="pd">密&nbsp;码:<input type="password" name="password"></div><!-- 密码输入框 -->
+		<div id="st">&nbsp;&nbsp;&nbsp;<input type="submit" value="登陆">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="重置"></div><!-- 重置和登陆按钮 -->
+						   </form>
+	</div>
+	
+	<hr>
+	
+	
+	<base>	base定义页面中所有链接的默认地址或默认目标。   </base>                    <br>
+	<basefont>	basefont不赞成使用。定义页面中文本的默认字体、颜色或尺寸。   <basefont>      <br>
+	
+	<!--...-->   !-- --组合用来实现网页注释                                                          <br>
+	<abbr>	abbr定义缩写。</abbr>   </abbr>                                                 <br>
+	<address>	定义文档作者或拥有者的联系信息。  </address>                         <br>
+	                                                  <br>
+	<bdi>	定义文本的文本方向，使其脱离其周围文本的方向设置。  </bdi>           <br>
+	<bdo>	定义文字方向。</bdo>                                                 <br>
+	<big>	定义大号文本。  </big>                                              <br>
+	<blockquote>	定义长的引用。  </blockquote>    <br>
+	
+	<cite>	定义引用(citation)。 </cite>                                          <br>
+	<code>	定义计算机代码文本。    </code>                                       <br>
+	<dfn>	定义定义项目。</dfn>                                                 <br>
+	<em>	定义强调文本。  </em>                                               <br>
+	<font>	不赞成使用。定义文本的字体、尺寸和颜色      </font>                   <br>
+	<ins>	定义被插入文本。</ins>                                               <br>
+	<kbd>	定义键盘文本。     </kbd>                                           <br>
+	<mark>	mark定义有记号的文本。  </mark>                                          <br>
+	<meter>	meter定义预定义范围内的度量。  </meter>                                    <br>
+	<q>	q定义短的引用。  </q>                                                   <br>
+	<rp>	定义若浏览器不支持 ruby 元素显示的内容。</rp>                       <br>
+	<rt>	定义 ruby 注释的解释。    </rt>                                     <br>
+	<ruby>	定义 ruby 注释。   </ruby>                                            <br>
+	<s>	s不赞成使用。定义加删除线的文本。  </s>                                 <br>
+	<samp>	定义计算机代码样本。    </samp>                                       <br>
+	<small>	定义小号文本。     </small>                                            <br>
+	<strike>	不赞成使用。定义加删除线文本。 </strike>                            <br>
+	<strong>	strong定义语气更为强烈的强调文本。   </strong>                            <br>
+	<sup>	定义上标文本。      </sup>                                           <br>
+	<sub>	定义下标文本。       </sub>                                         <br>
+	<time>	定义日期/时间。    </time>                                            <br>
+	<tt>	定义打字机文本。    </tt>                                           <br>
+	<u>	不赞成使用。定义下划线文本。   </u>                                    <br>
+	<var>	定义文本的变量部分。    </var>                                       <br>
+	<wbr>	定义视频。</wbr>                                                   <br>
+	<link>	定义文档与外部资源的关系。    </link>                                 <br>
+	<nav>	定义导航链接。                </nav>                                 <br>
+	<frameset>	定义框架集。          </frameset>                                     <br>
+	<noframes>	noframes定义针对不支持框架的用户的替代内容。      </noframes>                <br>
+	<iframe>	iframe定义内联框架。     </iframe>                                        <br>
+	<canvas>	定义图形。            </canvas>                                     <br>
+	<figcaption>	定义 figure 元素的标题。 </figcaption>                              <br>
+	<figure>	定义媒介内容的分组，以及它们的标题。</figure>   </                    <br>
+	<audio>	定义声音内容。     </audio>                                            <br>
+	<source>	定义媒介源。                                           <br>
+	<track>	定义用在媒体播放器中的文本轨道。     </track>      <br>
+	<video>	定义视频。</video>                                                     <br>
+	<col>	定义表格中一个或多个列的属性值。       </col>                     <br>
+	<colgroup>	定义表格中供格式化的列组。   </colgroup>                              <br>
+    <optgroup>	定义选择列表中相关选项的组合。 </optgroup>                            <br>
+    <label>	定义 input 元素的标注。    </label>                                    <br>
+    <fieldset>	定义围绕表单中元素的边框。     </ieldset>                            <br>
+    <legend>	定义 fieldset 元素的标题。 </legend>                                <br>
+    <isindex>	不赞成使用。定义与文档相关的可搜索索引。                   <br>
+    <datalist>	定义下拉列表。       </datalist>                                     <br>
+    <keygen>	定义生成密钥。       </keygen>                                    <br>
+    <output>	定义输出的一些类型。  </output>                                     <br>
+    <script>	定义客户端脚本。 </script>                                          <br>
+    <noscript>	定义针对不支持客户端脚本的用户的替代内容。  </noscript>               <br>
+    <applet>	不赞成使用。定义嵌入的 applet。   </applet>                         <br>
+    <embed>	为外部应用程序（非 HTML）定义容器。</embed>                            <br>
+    <object>	定义嵌入的对象。  </object>                                         <br>
+    <param>	定义对象的参数。</param>	
+  </body>
+</html>
+
+
+
+
+
+
+	

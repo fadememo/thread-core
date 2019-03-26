@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>伪类练习</title>
+<!--
+	练习：使用伪类选择器，实现鼠标经过表格的每行，行的背景颜色变为蓝色。
+    	提示： 背景颜色： background-color
+       
+ -->
+<style type="text/css">
+	 tbody tr:hover{
+		background-color:#00F; 
+	}
+</style>
+</head>
+
+<body>
+<table border="1px" width="400px" height="200px" align="center">
+	<caption>2014年期末考试成绩单</caption>
+    <thead>
+	<tr>
+    	<th>姓名</th>
+        <th>班级</th>
+        <th>成绩</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    	<td>狗娃</td>
+        <td>计算机1班</td>
+        <td>80</td>
+    </tr>
+    <tr>
+    	<td>狗剩</td>
+        <td>计算机2班</td>
+        <td>78</td>
+    </tr>
+    <tr>
+    	<td>狗蛋</td>
+        <td>软件1班</td>
+        <td>90</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
