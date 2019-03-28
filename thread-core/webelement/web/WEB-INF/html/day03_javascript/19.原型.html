@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原型</title>
+<!--
+	问题： 不使用ArrayUtil工具，但也想实现search和max方法的功能
+	预期解决方法： 想把search和max方法设计到Array内置对象中
+    
+    问题：如何给Array对象扩展两个方法呢？
+    
+    方案一：拿到Array定义对象的代码，在代码上加
+    	function Array(){
+        	this.join = function(){}
+            this.reverse = function(){}
+            this.saarch = function(){}   追加方法
+        }
+        拿不到Array对象的源码，行不通
+        
+        
+     方案二：使用原型属性给Array对象添加方法
+     	什么是原型？
+        	1）js的每个对象中都包含有了原型属性（prototype）
+            2）如果往某个对象的原型属性添加了方法，那么添加的这个方法就会自动地添加到当前对象的方法中。
+            3) 原型的作用：给内置对象追加方法的
+            
+           function Array(){
+           		//属性
+           		this.prototype = new Prototype(); //原型对象
+           
+           		this.search = function(){}
+           }
+           
+           原型对象
+           function Prototype(){
+           		this.search = function(){}
+           
+            }
+    
+ -->
+
+<script type="text/javascript">
+	/*
+		给Array追加一个search和max方法
+	*/
+	Array.prototype.search = function(target){
+			//遍历
+			for(var i=0;i<this.length;i++){
+				if(this[i]==target){
+					return i;	
+				}	
+			}
+			return -1; //找不到就是-1
+		}
+		
+	Array.prototype.max = function(){
+			//存储最大值
+			var max = this[0];
+			for(var i=1;i<this.length;i++){
+				if(this[i]>max){
+					max = this[i];
+				}
+			}
+			return max;
+	}
+
+	var arr = [10,43,21,65,3,87];
+	
+	var index = arr.search(87);
+	document.write("位置是："+index+"<br/>");
+	
+	var max = arr.max();
+	document.write("最大值："+max);
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

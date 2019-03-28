@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>练习</title>
+<script type="text/javascript">
+	/*
+	1，显示"*"为三角型，5行，第1行有1个"*"，第2行有2个"*"……
+
+	2，显示乘法口诀。
+			1*1=1
+			1*2=2 2*2=4
+			....
+			1*9=9 2*9=18 ...
+	
+	*/
+	for(var i=1;i<=5;i++){ //行数
+		for(var j=1;j<=i;j++){ // 控制星星数
+			document.write("*&nbsp;");
+		}
+		document.write("<br/>");
+	}
+	document.write("<hr/>");
+	
+	for(var i=1;i<=9;i++){
+		for(var j=1;j<=i;j++){
+			document.write(i+"*"+j+"="+(i*j)+"&nbsp;");
+		}
+		document.write("<br/>");
+	}
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

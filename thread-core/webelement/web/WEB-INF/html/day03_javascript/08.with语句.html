@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>with语句</title>
+<script type="text/javascript">
+/*
+	with语句：方便函数的调用
+		with(对象){
+			直接写对象的方法，无需写对象的名称	
+		}
+*/
+
+	with(document){
+		
+		for(var i=1;i<=5;i++){ //行数
+			for(var j=1;j<=i;j++){ // 控制星星数
+				write("*&nbsp;");
+			}
+			write("<br/>");
+		}
+		write("<hr/>");
+		
+		for(var i=1;i<=9;i++){
+			for(var j=1;j<=i;j++){
+				write(i+"*"+j+"="+(i*j)+"&nbsp;");
+			}
+			write("<br/>");
+		}
+		
+	}
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>函数</title>
+<script type="text/javascript">
+	/*
+	函数定义：
+		function 函数名称(形式参数列表){
+			语句	
+		}
+	
+	调用函数:
+		函数名称(实际参数列表);
+		
+		注意：
+			1）js的函数使用function定义，但是形式参数列表不能使用var关键词
+			2）js的函数可以有返回值，直接使用return关键词返回即可，不需要声明返回值类型
+			3) js没有方法重载的概念，后面定义的函数会覆盖前面的函数。
+			4）js中的形式参数和实际参数的数量可以不一致，依然可以调用。
+			5）js的每个函数中都隐藏了一个叫arguments的数组，这个数组用于接收函数调用时传递过来的实际参数值。
+			6)arguments数组接收完实际参数后，会逐一的依次从左到右赋值给形式参数,如果实际参数数量大于形式参数，则丢失剩下的实际参数
+	
+	*/
+	function add(a,b){ //a=10  b=20  40 
+		//alert(arguments.length);
+		for(var i=0;i<arguments.length;i++){
+			document.write(arguments[i]+",");	
+		}	
+		var result = a+b;
+		document.write("两个参数的结果为："+result);	
+		//return result;
+	}
+	
+	function add(a,b,c){ // a=10  b=20  c undefined  a+b+c=NaN
+		var result = a+b+c;
+		document.write("三个参数的结果为："+result);
+	}
+	
+	//var s = add(10,20);
+	//document.write("返回值："+s);
+	add(10,20);
+	
+	
+	/*
+	实际参数<形式参数： NaN
+	实际参数>形式参数： 取前面的实际参数，后面的参数丢失
+	
+	*/
+	
+	
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

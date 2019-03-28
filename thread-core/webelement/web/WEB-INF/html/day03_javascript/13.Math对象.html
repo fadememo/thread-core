@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Math对象</title>
+<script type="text/javascript">
+	/*
+	常用的方法：
+		1）ceil()： 向上取整。 如果有小数部分的话，直接+1
+		2）floor(): 向下取整。如果有小数部分的话，直接丢失小数部分，保利整数位
+		3) round(): 四舍五入取整。满5进一
+		4）random(): 生成一个随机的0-1的小数 .包含0，不包含1
+		5）max(): 返回最大值
+		6）min(): 返回最小值
+
+	*/
+	var num = 3.50;
+	document.write(Math.ceil(num)+"<br/>");
+	document.write(Math.floor(num)+"<br/>");
+	document.write(Math.round(num)+"<br/>");
+	document.write(Math.round(Math.random()*100)+"<br/>");
+	document.write(Math.max(10,6,54,23,76)+"<br/>");
+	document.write(Math.min(10,6,54,23,76)+"<br/>");
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

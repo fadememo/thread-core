@@ -140,4 +140,27 @@ public class JedisTest {
     public void testAssert(){
         int i = 10;
     }
+    public void output(){
+        String s = "<table border=\"1px\" width=\"400px\" height= \"200px\" align=\"center\" >\n" +
+                "\t\t<caption>\"表格标题\" 使用内嵌在table里面的caption标签实现</caption>\n" +
+                "\t\t<thead>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<th>majoy</th><th colspan=\"2\">majoy+colspan行合并</th>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</thead>\n" +
+                "\t\t<tbody>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<td>never</td><td>never</td><td rowspan = \"2\">never+rowspan列合并</td>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<td>die</td><td>die</td>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</tbody>\n" +
+                "\t\t<tfoot>\t\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<td>666sd</td><td>666sd</td><td>666sd</td>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</tfoot>\n" +
+                "\t</table>";
+    }
 }

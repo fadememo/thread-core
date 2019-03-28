@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网页时钟</title>
+
+</head>
+
+<body>
+当前的日期为：<span id="dateTip"></span>
+</body>
+<script type="text/javascript">
+	function genNewDate(){
+		//生成一个系统的当前时间，格式：2015-06-01 15:22:30
+		var date = new Date();
+		//当前日期时间的字符串
+		var dateStr = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+"&nbsp;"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+		//把日期字符串放到span中
+		//得到span对象
+		var dateTip = document.getElementById("dateTip"); //读到了没有加载的标签，无法读取的
+		//设置span的innerHTMl属性给span赋值
+		dateTip.innerHTML=dateStr;
+	}
+
+	//设置定时器，每个多少毫秒调用1次任务（函数）
+	window.setInterval("genNewDate()",1000);
+</script>
+</html>

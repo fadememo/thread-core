@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>for-in语句（类似于java的增强for）</title>
+<script type="text/javascript">
+	/*
+	for-in语句：
+		for(var 遍历 in  数组|对象){
+				
+		}
+	
+		作用：
+			1）遍历数组
+			2）对象
+			注意：
+				遍历对象的时候，变量是属性的名称，如果获取属性值，则 p[i]; 
+	*/
+	//定义数组
+	/*
+	var arr = [10,20,30,40];
+	
+	//遍历数组
+	//使用for循环
+	for(var i=0;i<arr.length;i++){
+		document.write(arr[i]+",");	
+	}
+	document.write("<hr/>");
+	//使用for-in遍历
+	for(var i in arr){
+		document.write(arr[i]+",");		
+	}
+	*/
+	
+	//定义对象
+	function Person(name,age){
+		this.name = name;
+		this.age = age;
+	}
+	//创建对象
+	var p = new Person("eric",20);
+	
+	//遍历对象
+	for(var i in p){
+		document.write(p[i]+"<br/>");	
+	}
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

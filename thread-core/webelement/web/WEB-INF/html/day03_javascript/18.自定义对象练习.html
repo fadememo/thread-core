@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>自定义对象练习</title>
+<!-- 导入js文件-->
+<script src="ArrayUtil.js"></script>
+
+<script type="text/javascript">
+	var arr = [10,43,21,65,3,87];
+	
+	//创建ArrayUtil对象
+	var arrayUtil = new ArrayUtil();
+	var index = arrayUtil.search(arr,3);
+	document.write("位置是："+index+"<br/>");
+	
+	var max = arrayUtil.max(arr);
+	document.write("最大值："+max);
+
+
+</script>
+
+</head>
+
+<body>
+</body>
+</html>

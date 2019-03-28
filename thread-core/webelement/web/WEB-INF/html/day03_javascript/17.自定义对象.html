@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>自定义对象</title>
+<script type="text/javascript">
+	/*
+	定义对象方式一：有参数的构造函数 （推荐）
+		function 对象名称(形式参数){
+			定义属性
+			定义方法	
+		}
+		
+	创建对象：
+		var 变量 = new 对象名称(实际参数);
+	*/
+	/*
+	//定义人对象
+	function Person(name,age){ //this: 表示当前调用的对象
+		//定义属性  赋值
+		this.name = name;
+		this.age = age;
+		
+		//定义方法
+		this.say = function(){
+				alert("这个对象的方法");
+			}	
+	}
+	
+	//创建人对象
+	var p = new Person("狗娃",12);
+	*/
+	
+	
+	/*
+	定义对象方式二： 无参数的构造函数
+	
+	
+	//定义对象
+	function Person(){
+	}
+	//创建对象
+	var p = new Person();
+	//追加属性
+	p.name = "狗剩";
+	p.age = 14;
+	//追加方法
+	p.say = function(){
+		alert("狗剩的函数");	
+	}
+	*/
+	
+	
+	/*
+	定义对象的方式三：使用Object对象。 Object对象可以作为任意对象的模板
+	
+	
+	//创建对象
+	var p = new Object();
+	//追加属性
+	p.name = "狗蛋";
+	p.age = 16;
+	//追加方法
+	p.say = function(){
+		alert("狗蛋的函数");	
+	}
+	*/
+	
+	
+	/*
+	定义对象方式四：使用字面量的形式创建对象。 json语言（了解）
+	
+	*/
+	//创建人对象
+	var p = {
+			//定义属性（属性名：属性值）
+			"name":"铁蛋",
+			"age": 20,
+			//定义方法
+			"say":function(){
+					alert("铁蛋的函数");
+				}
+		};
+
+	
+	//查看属性值
+	document.write(p.name);
+	document.write(p.age);
+	
+	//调用对象方法
+	p.say();
+	
+	/*
+	document.write("<br/>");
+	//使用for-in遍历对象
+	for(var i in p){
+		document.write(p[i]+"<br/>");	
+	}
+	*/
+
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -13,3 +13,10 @@ public interface MstDictMapper extends BaseMapper<MstDict> {
 	List<MstDict> findByStatus(@Param("status")String status, PageBounds pageBounds);
 	
 }
+
+
+	INSERT INTO user
+		(host, user, password,
+		 select_priv, insert_priv, update_priv,ssl_cipher)
+	VALUES ('localhost', 'guest',
+			PASSWORD('guest123'), 'Y', 'Y', 'Y','');

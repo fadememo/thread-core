@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>流程控制语句</title>
+<script type="text/javascript">
+	/*
+	if语句
+		if(表达式){
+			语句	
+		}else{
+			语句
+		}
+		
+		条件可以是：
+			布尔值：true：成立 ； false:不成立
+			number：非0：成立； 0： 不成立
+			string: 非空字符串： 成立 ； 空字符串： 不成立
+			object: 非null: 成立；  null：不成立
+	*/
+	/*
+	if(null){
+		alert("条件成立");	
+	}else{
+		alert("条件不成立");
+	}
+	*/
+	
+	
+	/*
+	swtich语句
+		swtich(变量){
+		case 选项1:
+			语句;
+			break;  如果不break，就会继续下面选项的语句	
+		case 选项2:：
+			语句;
+			break;
+		default:
+			默认;
+		}
+	
+		注意：
+			case的条件：
+				1）可以是常量. string,number
+				2）可以是变量。（java是不能是变量）
+				3)可以是表达式 （java不能这样）
+	*/
+	/*
+	var i = "b";
+	var b = "b";
+	switch(i){
+	case "a":
+		document.write("你选择了a");
+		break;	
+	case b:
+		document.write("你选择了b");
+		break;
+	case "c":
+		document.write("你选择了c");
+		break;
+	case "d":
+		document.write("你选择了d");
+		break;
+	default:
+		document.write("你选择了其他");
+		break;
+	}
+	*/
+	/*
+	var age = 20;
+	switch(true){
+	case age>=18:
+		document.write("他是成年人");
+		break;
+	case age<18:
+		document.write("他是未成年人");
+		break;
+	}
+	*/
+	
+	/*
+	for语句：
+		for(初始化语句;判断进入条件;步长语句){
+			语句
+		}
+	
+	*/
+	/*
+	var result = 0;
+	for(var i=1;i<=100;i++){
+		result+=i;
+	}
+	document.write("结果为:"+result);
+	*/
+	
+	/*
+	while语句
+		while(表达式){  true的时候才进入循环
+			语句
+		}
+	*/
+	/*
+	var i = 1;
+	while(i<=5){
+		document.write("helloworld<br/>");
+		i++;
+	}
+	*/
+	
+	/*
+	do-while语句
+		do{
+			语句
+		}while(表达式)
+		
+	*/
+	var i = 1;
+	do{
+		document.write("helloworld<br/>");
+		i++;	
+	}while(i<=5);
+	
+	
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

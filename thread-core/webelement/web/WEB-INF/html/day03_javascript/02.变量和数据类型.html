@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>变量和数据类型</title>
+<script type="text/javascript">
+	/*
+	1）定义和赋值变量： var 变量名=值;
+		注意：
+			1）使用var关键词定义变量，var可以省略的，但是不建议省略var
+			2) 在js中可以重复定义变量，后面定义的变量会覆盖前面的变量。
+			3) js是弱类型语言，使用var来定义任何数据类型
+			4）js中变量的类型是由变量的值决定的，所以只定义不赋值的变量，就是一个未赋值变量（undefined），未赋值的变量不能使用
+			
+		typeof(变量)： 查看变量的数据类型
+	
+	2)js的数据类型分类：
+		a）number： 无论整数还是小数，都是number类型
+		b) string:  无论字符还是字符串，都是string类型
+		c) boolean
+		d) object  对象类型
+	*/
+	var a = 10;
+	//var a = 20;
+	var b = 3.14;
+	var c = 'c';
+	var d = "hello";
+	var e = true;
+	var f = new Object();
+	
+	
+	document.write("a的值为："+a +",a的数据类型是:"+typeof(a)+"<br/>");
+	document.write("b的值为："+b +",b的数据类型是:"+typeof(b)+"<br/>");
+	document.write("c的值为："+c +",c的数据类型是:"+typeof(c)+"<br/>");
+	document.write("d的值为："+d +",d的数据类型是:"+typeof(d)+"<br/>");
+	document.write("e的值为："+e +",e的数据类型是:"+typeof(e)+"<br/>");
+	document.write("f的值为："+f +",f的数据类型是:"+typeof(f)+"<br/>");
+	
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Date对象</title>
+<script type="text/javascript">
+	//创建日期
+	var date = new Date(); //取当前系统日期时间    java: SimpleDateFormat对象 yyyy-MM-dd 格式化
+	//document.write(date);  //默认格式
+	//格式： 2015年06月01日 15时12分30秒
+	//年份
+	document.write(date.getFullYear()+"年");
+	//月
+	document.write((date.getMonth()+1)+"月");
+	//日
+	document.write(date.getDate()+"日");
+	//星期
+	document.write("星期"+date.getDay()+"&nbsp;");
+	//时
+	document.write(date.getHours()+"时");
+	//分
+	document.write(date.getMinutes()+"分");
+	//秒
+	document.write(date.getSeconds()+"秒");
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
